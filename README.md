@@ -315,7 +315,6 @@ ResolveAI/
 ├── api.py                        # Main AI API entry point (FastAPI)
 ├── local_model/                  # Fine-tuned classification model files
 ├── requirements.txt              # Python dependencies
-├── Project_Documentation.tex     # Complete Project Documentation (LaTeX)
 ├── README.md                     # Setup instructions
 │
 └── webapp/
@@ -341,13 +340,137 @@ ResolveAI/
 
 ---
 
+## Development & Testing with Requestly
+
+### API-First Development Approach
+
+ResolveAI was developed using **Requestly** as the primary API command center during development and testing. Instead of relying on the frontend UI for validation, all critical backend and AI workflows were designed, tested, and debugged directly using the Requestly API Client.
+
+<details>
+<summary><b>Why Requestly Was Essential</b></summary>
+
+ResolveAI consists of multiple interacting components:
+- A Node.js backend handling business logic
+- A FastAPI-based AI service performing complaint classification
+- Strict JSON-based contracts between services
+
+Testing such a system purely through the UI is slow and error-prone. Requestly allowed us to:
+- Directly test APIs in isolation
+- Simulate edge cases without UI constraints
+- Validate AI behavior with precision
+- Debug complex multi-service interactions
+
+</details>
+
+<details>
+<summary><b>API Collection Organization</b></summary>
+
+Requestly collections were organized by responsibility:
+
+**Health & Diagnostics**
+- `GET /health` – Verify AI service availability and model loading
+
+**AI Classification**
+- `POST /classify` – Single complaint classification
+- `POST /classify/batch` – Batch complaint processing
+- `POST /explain` – Explainability endpoint for admin insights
+
+**Failure & Edge Cases**
+- Empty complaint text
+- Ambiguous complaints
+- Multi-category complaints
+- High-risk harassment scenarios
+
+Each request was saved with example payloads and expected responses, creating a reusable and well-documented API workspace.
+
+</details>
+
+<details>
+<summary><b>Complex Request Construction</b></summary>
+
+Requestly was used to construct non-trivial POST requests with structured JSON bodies.
+
+**Example single complaint payload:**
+```json
+{
+  "complaint": "The water cooler on the third floor is broken and feels unsafe"
+}
+```
+
+**Example batch testing payload:**
+```json
+{
+  "complaints": [
+    "Professor is threatening students over grades",
+    "WiFi not working in hostel block B",
+    "Water leakage near electrical panel"
+  ]
+}
+```
+
+This allowed us to validate:
+- Multi-category detection
+- Severity assignment
+- SLA calculation logic
+- Correct department routing
+
+</details>
+
+<details>
+<summary><b>Endpoint Validation & Debugging</b></summary>
+
+Requestly was heavily used to:
+- Verify response schemas matched the expected Pydantic models
+- Ensure strict JSON output from the AI service
+- Check HTTP status codes for success and failure cases
+- Inspect response timing to identify slow inference paths
+
+When classification failed or returned unexpected output, Requestly made it easy to:
+- Replay the exact same request
+- Compare outputs before and after logic changes
+- Debug fallback mechanisms without UI interference
+
+</details>
+
+<details>
+<summary><b>Testing AI Logic Without UI Dependency</b></summary>
+
+Using Requestly, we validated:
+- Confidence-aware routing logic
+- Escalation rules for critical complaints
+- Anonymous submission recommendations
+- SLA calculations based on severity
+
+This ensured the AI and backend logic were correct before being integrated into the frontend, significantly reducing debugging time.
+
+</details>
+
+<details>
+<summary><b>Workflow Efficiency & Impact</b></summary>
+
+Requestly improved development speed and reliability by:
+- Acting as a single source of truth for API behavior
+- Allowing rapid iteration on AI prompts and parsing logic
+- Making backend validation independent of frontend readiness
+- Enabling repeatable, deterministic testing of sensitive grievance scenarios
+
+For a system handling privacy-sensitive and high-impact complaints, this level of API-level validation was essential.
+
+</details>
+
+### Summary
+
+Requestly was not used as a simple request sender, but as a **professional-grade API testing and validation platform**. It enabled faster debugging, cleaner architecture, and higher confidence in AI-driven decision-making—making it a critical part of the ResolveAI development workflow.
+
+---
+
 ## How It Works
 
 ### The Intelligence Pipeline
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    User Submits Complaint                        │
+│                    User Submits Complaint                       │
 └────────────────────────────┬────────────────────────────────────┘
                              │
                              ▼
@@ -498,6 +621,9 @@ Route =
 - PyTorch
 - Hugging Face Transformers
 - Fine-tuned NLP models
+
+**Development & Testing:**
+- Requestly API Client for API testing and validation
 
 ---
 
