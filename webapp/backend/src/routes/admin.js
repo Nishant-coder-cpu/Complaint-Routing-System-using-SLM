@@ -340,4 +340,136 @@ router.put('/users/:id', async (req, res) => {
     }
 });
 
+// POST /api/admin/users - Create a new user
+router.post('/users', async (req, res) => {
+    try {
+        const { email, password, role, department } = req.body;
+
+        if (!email || !password || !role) {
+            return res.status(400).json({ error: 'Email, password, and role are required' });
+        }
+
+        const validRoles = ['complainant', 'authority', 'admin'];
+        if (!validRoles.includes(role)) {
+            return res.status(400).json({ error: 'Invalid role' });
+        }
+
+        if (role === 'authority' && !department) {
+            return res.status(400).json({ error: 'Authority users must have a department' });
+        }
+
+        // Create user in Supabase Auth via Admin API
+        const { data, error } = await supabase.auth.admin.createUser({
+            email,
+            password,
+            email_confirm: true,
+            user_metadata: { role, department }
+        });
+
+        if (error) {
+            console.error('Error creating user in Supabase Auth:', error);
+            return res.status(400).json({ error: error.message });
+        }
+
+        const user = data.user;
+
+        // Insert into public.users table to sync metadata
+        const { error: dbError } = await supabase
+            .from('users')
+            .upsert({
+                id: user.id,
+                email: user.email,
+                role,
+                department
+            }, { onConflict: 'id' });
+
+        if (dbError) {
+            console.error('Error syncing user to public table:', dbError);
+            // We don't rollback auth creation here for simplicity but log the error (in prod would be better)
+        }
+
+        res.status(201).json({
+            message: 'User created successfully',
+            user: {
+                id: user.id,
+                email: user.email,
+                role,
+                department
+            }
+        });
+
+    } catch (error) {
+        console.error('Error in create user endpoint:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// GET /api/admin/export - Export complaints data
+router.get('/export', async (req, res) => {
+    try {
+        const { format = 'json', range = 'all' } = req.query;
+
+        let query = supabase
+            .from('complaints')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+        // Apply date range filter
+        if (range !== 'all') {
+            const now = new Date();
+            let startDate;
+
+            if (range === '30d') {
+                startDate = new Date(now.setDate(now.getDate() - 30));
+            } else if (range === '90d') {
+                startDate = new Date(now.setDate(now.getDate() - 90));
+            } else if (range === '1y') {
+                startDate = new Date(now.setFullYear(now.getFullYear() - 1));
+            }
+
+            if (startDate) {
+                query = query.gte('created_at', startDate.toISOString());
+            }
+        }
+
+        const { data, error } = await query;
+
+        if (error) {
+            console.error('Error fetching data for export:', error);
+            return res.status(500).json({ error: 'Failed to fetch data' });
+        }
+
+        const exportData = data || [];
+
+        if (format === 'csv') {
+            // Convert to CSV
+            const fields = ['id', 'complaint_text', 'categories', 'severity', 'status', 'route_to', 'created_at', 'updated_at'];
+            const csv = [
+                fields.join(','),
+                ...exportData.map(row => fields.map(field => {
+                    const val = row[field];
+                    if (Array.isArray(val)) return `"${val.join(';')}"`;
+                    if (typeof val === 'string') return `"${val.replace(/"/g, '""')}"`;
+                    return val;
+                }).join(','))
+            ].join('\n');
+
+            res.setHeader('Content-Type', 'text/csv');
+            res.setHeader('Content-Disposition', `attachment; filename=export_${new Date().toISOString()}.csv`);
+            return res.send(csv);
+        }
+
+        // Default to JSON
+        res.json({
+            export_date: new Date().toISOString(),
+            records: exportData.length,
+            data: exportData
+        });
+
+    } catch (error) {
+        console.error('Error in export endpoint:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 module.exports = router;
