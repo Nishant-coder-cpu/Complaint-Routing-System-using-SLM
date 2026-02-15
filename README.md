@@ -16,7 +16,7 @@
 
 > **Coming Soon!** Watch ResolveAI in action
 
-**[View Demo on YouTube](https://youtube.com/placeholder)**
+**[View Demo on YouTube](https://youtu.be/qqGPYvj9Dck?si=mI9eNUjfZ9X3opgR)**
 
 *Full system demonstration and walkthrough*
 
@@ -29,6 +29,7 @@
 *Comprehensive technical documentation including mathematical proofs, system architecture, and feature explanations*
 
 ---
+
 
 ## Required Downloads
 
