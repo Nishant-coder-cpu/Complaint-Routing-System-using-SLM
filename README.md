@@ -30,14 +30,20 @@
 
 ---
 
+## Required Downloads
+
+**[Download AI Model Weights](https://drive.google.com/file/d/1otbd6p3k0UJJv8_dsyrDY7dapAp_-Hid/view?usp=sharing)** (Required for AI Service)
+
+> Place the downloaded model files in a folder named `local_model` in the root directory before starting the AI service.
+
+---
+
 ## What is ResolveAI?
 
 ResolveAI is a **next-generation grievance redressal system** that combines artificial intelligence with human oversight to create a fair, transparent, and efficient complaint resolution process. Unlike traditional systems that rely on manual triage and static rules, ResolveAI brings intelligence to every step of the complaint lifecycle.
 
 <details>
 <summary><b>The Problem We Solve</b></summary>
-
-<br>
 
 Traditional grievance systems suffer from:
 - **Slow Manual Triage**: Human reviewers create bottlenecks
@@ -57,7 +63,7 @@ Traditional grievance systems suffer from:
 <details>
 <summary><b>Confidence-Aware Routing with Human-in-the-Loop</b></summary>
 
-<br>
+
 
 - AI generates predictions **with confidence scores**
 - High confidence leads to automatic routing
@@ -76,7 +82,7 @@ Confidence < 50%   → Manual review queue
 <details>
 <summary><b>Feedback-Driven Continuous Learning</b></summary>
 
-<br>
+
 
 - Authorities can confirm or correct AI predictions
 - System learns from institutional expertise
@@ -99,7 +105,7 @@ Confidence < 50%   → Manual review queue
 <details>
 <summary><b>Dynamic SLA Estimation</b></summary>
 
-<br>
+
 
 Calculates realistic resolution times based on:
 - Complaint severity
@@ -122,7 +128,7 @@ SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
 <details>
 <summary><b>Community Signal-Driven Urgency</b></summary>
 
-<br>
+
 
 - Users can like and comment on public complaints
 - Rapid engagement auto-escalates severity
@@ -161,7 +167,7 @@ If E > threshold → Auto-escalate to Critical
 <details>
 <summary><b>AI-Assisted Admin Chat Interface</b></summary>
 
-<br>
+
 
 Ask questions in plain language:
 - "Which department is currently overloaded?"
@@ -180,7 +186,7 @@ Ask questions in plain language:
 <details>
 <summary><b>Review Queue for Uncertain AI Decisions</b></summary>
 
-<br>
+
 
 All low-confidence predictions grouped for review:
 - Inspect original complaint text
@@ -214,8 +220,6 @@ All low-confidence predictions grouped for review:
 <details>
 <summary><b>Step 1: Clone the Repository</b></summary>
 
-<br>
-
 ```bash
 git clone <repository-url>
 cd ResolveAI
@@ -226,9 +230,7 @@ cd ResolveAI
 <details>
 <summary><b>Step 2: AI Service Setup</b></summary>
 
-<br>
-
-#### Install Python Dependencies
+**Install Python Dependencies**
 
 ```bash
 # Create virtual environment (recommended)
@@ -239,12 +241,11 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-#### Download AI Model Weights
+**Model Weights Setup**
 
-**[Download Model Weights](https://drive.google.com/file/d/1otbd6p3k0UJJv8_dsyrDY7dapAp_-Hid/view?usp=sharing)**
+The AI model weights should already be downloaded (see Required Downloads section above).
 
-> **Important:** Place the downloaded model files in a folder named `local_model` in the root directory.
-
+Place the model files in this structure:
 ```
 ResolveAI/
 ├── local_model/          ← Place model files here
@@ -255,7 +256,7 @@ ResolveAI/
 └── ...
 ```
 
-#### Start the AI API Server
+**Start the AI API Server**
 
 ```bash
 uvicorn api:app --reload
@@ -267,8 +268,6 @@ API will be available at `http://localhost:8000`
 
 <details>
 <summary><b>Step 3: Backend Setup (Node.js)</b></summary>
-
-<br>
 
 ```bash
 cd webapp/backend
@@ -290,8 +289,6 @@ Backend will be available at `http://localhost:3000`
 
 <details>
 <summary><b>Step 4: Frontend Setup (React)</b></summary>
-
-<br>
 
 ```bash
 cd webapp/frontend
@@ -338,7 +335,7 @@ ResolveAI/
         │   └── main.jsx          # Entry point
         ├── .env                  # Frontend config
         ├── package.json
-        └── vite.config.js                   # Technical documentation
+        └── vite.config.js
 ```
 
 ---
@@ -403,7 +400,7 @@ ResolveAI/
 <details>
 <summary><b>Dynamic SLA Formula</b></summary>
 
-<br>
+
 
 ```
 SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
@@ -422,7 +419,7 @@ SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
 <details>
 <summary><b>Community Escalation Score</b></summary>
 
-<br>
+
 
 ```
 E = (L / (T + 1)^α) × W_user
@@ -441,7 +438,7 @@ E = (L / (T + 1)^α) × W_user
 <details>
 <summary><b>Confidence-Based Routing</b></summary>
 
-<br>
+
 
 ```
 Route =
