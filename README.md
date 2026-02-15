@@ -38,7 +38,7 @@ An AI-driven system for automated grievance classification, routing, and managem
 3.  **Download Model Weights:**
     The AI model weights are required for the classification service.
     
-    [**DOWNLOAD MODEL WEIGHTS HERE**]([placeholder-link-to-be-provided-by-user](https://drive.google.com/file/d/1otbd6p3k0UJJv8_dsyrDY7dapAp_-Hid/view?usp=sharing))
+    [**DOWNLOAD MODEL WEIGHTS HERE**](https://drive.google.com/file/d/1otbd6p3k0UJJv8_dsyrDY7dapAp_-Hid/view?usp=sharing)
 
     > **Note:** Download the model files and place them in a folder named `local_model` in the root directory.
 
