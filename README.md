@@ -1,14 +1,34 @@
 <div align="center">
 
-# ResolveAI
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=30,144,255&height=200&section=header&text=ResolveAI&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=fff" />
 
-### AI-Powered Grievance Redressal System
+<div style="background-color: #001a33; margin-top: -30px; padding: 40px 0;">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=1e90ff&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=120&lines=AI-Powered+Grievance+Redressal;Transforming+Complaint+Management;Intelligent+Automation+%26+Human+Support" alt="Typing SVG" />
+  </a>
+</div>
 
-*Transforming complaint management through intelligent automation and human-aligned decision support*
+<h3>🛠️ Tech Stack</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Express-Node.js-90C53F?style=for-the-badge&logo=node.js&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/PyTorch-AI-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
 
-[Demo Video](#demo-video) • [Documentation](#documentation) • [Quick Start](#quick-start) • [Features](#features)
+<hr />
 
----
+<h3>🚀 Project Links</h3>
+<p align="center">
+  <a href="https://youtu.be/qqGPYvj9Dck?si=mI9eNUjfZ9X3opgR"><b>Video Demo</b></a> • 
+  <a href="https://drive.google.com/file/d/12sMgsOqGXHHN5mhdgVVdwsH8wr0pjLnD/view?usp=sharing"><b>Documentation</b></a> • 
+  <a href="https://drive.google.com/file/d/1otbd6p3k0UJJv8_dsyrDY7dapAp_-Hid/view?usp=sharing"><b>AI Model Weights</b></a>
+</p>
+
+<!-- Animated Divider -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 </div>
 
@@ -39,12 +59,12 @@
 
 ---
 
-## What is ResolveAI?
+## 🎯 What is ResolveAI?
 
-ResolveAI is a **next-generation grievance redressal system** that combines artificial intelligence with human oversight to create a fair, transparent, and efficient complaint resolution process. Unlike traditional systems that rely on manual triage and static rules, ResolveAI brings intelligence to every step of the complaint lifecycle.
+**ResolveAI** is a **next-generation grievance redressal system** that combines artificial intelligence with human oversight to create a fair, transparent, and efficient complaint resolution process. Unlike traditional systems that rely on manual triage and static rules, ResolveAI brings intelligence to every step of the complaint lifecycle.
 
-<details>
-<summary><b>The Problem We Solve</b></summary>
+<details open>
+<summary><b>🔍 The Problem We Solve</b></summary>
 
 Traditional grievance systems suffer from:
 - **Slow Manual Triage**: Human reviewers create bottlenecks
@@ -55,16 +75,16 @@ Traditional grievance systems suffer from:
 
 </details>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Features
+## 🚀 Features
 
-### Intelligent AI Classification
+### 🧠 Intelligent AI Classification
 
-<details>
-<summary><b>Confidence-Aware Routing with Human-in-the-Loop</b></summary>
-
-
+<details open>
+<summary><b>✅ Confidence-Aware Routing with Human-in-the-Loop</b></summary>
 
 - AI generates predictions **with confidence scores**
 - High confidence leads to automatic routing
@@ -80,10 +100,8 @@ Confidence < 50%   → Manual review queue
 
 </details>
 
-<details>
-<summary><b>Feedback-Driven Continuous Learning</b></summary>
-
-
+<details open>
+<summary><b>📚 Feedback-Driven Continuous Learning</b></summary>
 
 - Authorities can confirm or correct AI predictions
 - System learns from institutional expertise
@@ -99,14 +117,14 @@ Confidence < 50%   → Manual review queue
 
 </details>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-### Smart Prioritization
+### ⚡ Smart Prioritization
 
-<details>
-<summary><b>Dynamic SLA Estimation</b></summary>
-
-
+<details open>
+<summary><b>⏱️ Dynamic SLA Estimation</b></summary>
 
 Calculates realistic resolution times based on:
 - Complaint severity
@@ -126,10 +144,8 @@ SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
 
 </details>
 
-<details>
-<summary><b>Community Signal-Driven Urgency</b></summary>
-
-
+<details open>
+<summary><b>📈 Community Signal-Driven Urgency</b></summary>
 
 - Users can like and comment on public complaints
 - Rapid engagement auto-escalates severity
@@ -151,9 +167,8 @@ If E > threshold → Auto-escalate to Critical
 
 </details>
 
----
-
-### Role-Based Portals
+<details open>
+<summary><b>👥 Role-Based Portals</b></summary>
 
 | Role | Features |
 |------|----------|
@@ -161,14 +176,16 @@ If E > threshold → Auto-escalate to Critical
 | **Authorities** | Review cases, provide feedback, manage assignments |
 | **Admins** | AI-assisted insights, review queue, system oversight |
 
----
+</details>
 
-### Administrative Intelligence
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-<details>
-<summary><b>AI-Assisted Admin Chat Interface</b></summary>
+### 📊 Administrative Intelligence
 
-
+<details open>
+<summary><b>💬 AI-Assisted Admin Chat Interface</b></summary>
 
 Ask questions in plain language:
 - "Which department is currently overloaded?"
@@ -184,10 +201,8 @@ Ask questions in plain language:
 
 </details>
 
-<details>
-<summary><b>Review Queue for Uncertain AI Decisions</b></summary>
-
-
+<details open>
+<summary><b>🔐 Review Queue for Uncertain AI Decisions</b></summary>
 
 All low-confidence predictions grouped for review:
 - Inspect original complaint text
@@ -204,9 +219,11 @@ All low-confidence predictions grouped for review:
 
 </details>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Quick Start
+## 📥 Quick Start
 
 ### Prerequisites
 
@@ -214,11 +231,9 @@ All low-confidence predictions grouped for review:
 - Node.js 16+
 - PostgreSQL (or Supabase)
 
----
-
 ### Installation
 
-<details>
+<details open>
 <summary><b>Step 1: Clone the Repository</b></summary>
 
 ```bash
@@ -228,7 +243,7 @@ cd ResolveAI
 
 </details>
 
-<details>
+<details open>
 <summary><b>Step 2: AI Service Setup</b></summary>
 
 **Install Python Dependencies**
@@ -244,7 +259,7 @@ pip install -r requirements.txt
 
 **Model Weights Setup**
 
-The AI model weights should already be downloaded (see Required Downloads section above).
+Download the AI model weights from the link at the top of this README.
 
 Place the model files in this structure:
 ```
@@ -267,7 +282,7 @@ API will be available at `http://localhost:8000`
 
 </details>
 
-<details>
+<details open>
 <summary><b>Step 3: Backend Setup (Node.js)</b></summary>
 
 ```bash
@@ -288,7 +303,7 @@ Backend will be available at `http://localhost:3000`
 
 </details>
 
-<details>
+<details open>
 <summary><b>Step 4: Frontend Setup (React)</b></summary>
 
 ```bash
@@ -305,9 +320,11 @@ Application will be available at `http://localhost:5173`
 
 </details>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Project Architecture
+## 🏗️ Project Architecture
 
 ```
 ResolveAI/
@@ -339,16 +356,18 @@ ResolveAI/
         └── vite.config.js
 ```
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Development & Testing with Requestly
+## 🔧 Development & Testing with Requestly
 
 ### API-First Development Approach
 
 ResolveAI was developed using **Requestly** as the primary API command center during development and testing. Instead of relying on the frontend UI for validation, all critical backend and AI workflows were designed, tested, and debugged directly using the Requestly API Client.
 
-<details>
-<summary><b>Why Requestly Was Essential</b></summary>
+<details open>
+<summary><b>🎯 Why Requestly Was Essential</b></summary>
 
 ResolveAI consists of multiple interacting components:
 - A Node.js backend handling business logic
@@ -363,8 +382,8 @@ Testing such a system purely through the UI is slow and error-prone. Requestly a
 
 </details>
 
-<details>
-<summary><b>API Collection Organization</b></summary>
+<details open>
+<summary><b>📋 API Collection Organization</b></summary>
 
 Requestly collections were organized by responsibility:
 
@@ -386,8 +405,8 @@ Each request was saved with example payloads and expected responses, creating a 
 
 </details>
 
-<details>
-<summary><b>Complex Request Construction</b></summary>
+<details open>
+<summary><b>🔨 Complex Request Construction</b></summary>
 
 Requestly was used to construct non-trivial POST requests with structured JSON bodies.
 
@@ -417,8 +436,8 @@ This allowed us to validate:
 
 </details>
 
-<details>
-<summary><b>Endpoint Validation & Debugging</b></summary>
+<details open>
+<summary><b>✔️ Endpoint Validation & Debugging</b></summary>
 
 Requestly was heavily used to:
 - Verify response schemas matched the expected Pydantic models
@@ -433,8 +452,8 @@ When classification failed or returned unexpected output, Requestly made it easy
 
 </details>
 
-<details>
-<summary><b>Testing AI Logic Without UI Dependency</b></summary>
+<details open>
+<summary><b>🤖 Testing AI Logic Without UI Dependency</b></summary>
 
 Using Requestly, we validated:
 - Confidence-aware routing logic
@@ -446,8 +465,8 @@ This ensured the AI and backend logic were correct before being integrated into 
 
 </details>
 
-<details>
-<summary><b>Workflow Efficiency & Impact</b></summary>
+<details open>
+<summary><b>⚙️ Workflow Efficiency & Impact</b></summary>
 
 Requestly improved development speed and reliability by:
 - Acting as a single source of truth for API behavior
@@ -459,13 +478,15 @@ For a system handling privacy-sensitive and high-impact complaints, this level o
 
 </details>
 
-### Summary
+### 📌 Summary
 
 Requestly was not used as a simple request sender, but as a **professional-grade API testing and validation platform**. It enabled faster debugging, cleaner architecture, and higher confidence in AI-driven decision-making—making it a critical part of the ResolveAI development workflow.
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## How It Works
+## 🔄 How It Works
 
 ### The Intelligence Pipeline
 
@@ -518,14 +539,14 @@ Requestly was not used as a simple request sender, but as a **professional-grade
                         └───────────────────────┘
 ```
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Mathematical Foundations
+## 📐 Mathematical Foundations
 
-<details>
+<details open>
 <summary><b>Dynamic SLA Formula</b></summary>
-
-
 
 ```
 SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
@@ -541,10 +562,8 @@ SLA_dynamic = (SLA_base / (1 + SeverityScore)) + (γ × N_queue)
 
 </details>
 
-<details>
+<details open>
 <summary><b>Community Escalation Score</b></summary>
-
-
 
 ```
 E = (L / (T + 1)^α) × W_user
@@ -560,10 +579,8 @@ E = (L / (T + 1)^α) × W_user
 
 </details>
 
-<details>
+<details open>
 <summary><b>Confidence-Based Routing</b></summary>
-
-
 
 ```
 Route =
@@ -579,9 +596,11 @@ Route =
 
 </details>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Key Innovations
+## 🌟 Key Innovations
 
 | Feature | Traditional Systems | ResolveAI |
 |---------|-------------------|-----------|
@@ -592,9 +611,62 @@ Route =
 | **Transparency** | Black box | Explainable AI decisions |
 | **Error Handling** | Silent failures | Confidence-aware human review |
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Team
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### Backend
+- **Framework**: FastAPI (Python 3.9+), Express (Node.js 16+)
+- **Database**: PostgreSQL / Supabase
+- **API**: RESTful with strict JSON schemas
+
+### Frontend
+- **Framework**: React 18+ with Vite
+- **Animations**: Framer Motion
+- **Visualizations**: Recharts
+
+### AI/ML
+- **Deep Learning**: PyTorch
+- **Transformers**: Hugging Face
+- **NLP**: Fine-tuned models for classification
+
+### Development & Testing
+- **API Testing**: Requestly
+- **Version Control**: Git
+- **Package Management**: pip, npm
+
+</div>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
+
+## 🎯 Use Cases
+
+### 🏫 Educational Institutions
+Student grievances, facility issues, academic concerns
+
+### 🏥 Healthcare
+Patient feedback, service complaints, facility management
+
+### 🏛️ Government
+Citizen complaints, public services, infrastructure issues
+
+### 💼 Corporate
+Employee grievances, HR issues, workplace concerns
+
+### 🏘️ Municipal
+Community issues, infrastructure problems, public services
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
+
+## 👥 Team
 
 <div align="center">
 
@@ -604,71 +676,37 @@ Route =
 
 </div>
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
-## Tech Stack
-
-**Backend:**
-- Python 3.9+ with FastAPI
-- Node.js 16+ with Express
-- PostgreSQL / Supabase
-
-**Frontend:**
-- React 18+ with Vite
-- Framer Motion for animations
-- Recharts for visualizations
-
-**AI/ML:**
-- PyTorch
-- Hugging Face Transformers
-- Fine-tuned NLP models
-
-**Development & Testing:**
-- Requestly API Client for API testing and validation
-
----
-
-## Use Cases
-
-### Educational Institutions
-Student grievances, facility issues, academic concerns
-
-### Healthcare
-Patient feedback, service complaints, facility management
-
-### Government
-Citizen complaints, public services, infrastructure issues
-
-### Corporate
-Employee grievances, HR issues, workplace concerns
-
-### Municipal
-Community issues, infrastructure problems, public services
-
----
-
-## Contributing
+## 🤝 Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request.
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## Support
+## 💬 Support
 
 Having issues? Check out our [documentation](https://drive.google.com/file/d/12sMgsOqGXHHN5mhdgVVdwsH8wr0pjLnD/view?usp=sharing) or open an issue on GitHub.
 
----
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
 
 <div align="center">
 
 **Made with care by Team Kaju Katli**
 
-*If you find ResolveAI helpful, please consider giving it a star*
+*If you find ResolveAI helpful, please consider giving it a star* ⭐
 
 </div>
+
+<!-- Animated Footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=30,144,255&height=100&section=footer" />
