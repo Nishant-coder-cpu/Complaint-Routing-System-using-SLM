@@ -12,26 +12,19 @@ export default function TrainingDataModal({ isOpen, onClose }) {
     const handleDownload = async () => {
         setLoading(true);
         try {
-            // In a real app, this would call an endpoint like /admin/export
-            // For now, we'll simulate a download or fetch local data
+            const response = await api.get('/admin/export', {
+                params: { format, range: dateRange },
+                responseType: format === 'csv' ? 'blob' : 'json'
+            });
 
-            // Simulation of API call delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            const blob = format === 'csv'
+                ? response.data
+                : new Blob([JSON.stringify(response.data, null, 2)], { type: 'application/json' });
 
-            // Mock download
-            const data = JSON.stringify({
-                export_date: new Date().toISOString(),
-                format: format,
-                range: dateRange,
-                records: 154, // Mock count
-                data: []
-            }, null, 2);
-
-            const blob = new Blob([data], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `training_data_${new Date().toISOString().split('T')[0]}.${format}`;
+            a.download = `resolveai_export_${new Date().toISOString().split('T')[0]}.${format}`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -40,11 +33,11 @@ export default function TrainingDataModal({ isOpen, onClose }) {
             setDownloaded(true);
             setTimeout(() => {
                 onClose();
-                setDownloaded(false); // Reset for next time
+                setDownloaded(false);
             }, 2000);
-
         } catch (error) {
             console.error('Export failed:', error);
+            alert('Failed to export data. Please try again.');
         } finally {
             setLoading(false);
         }
@@ -64,7 +57,7 @@ export default function TrainingDataModal({ isOpen, onClose }) {
                             position: 'fixed', inset: 0,
                             backgroundColor: 'rgba(0, 0, 0, 0.7)',
                             backdropFilter: 'blur(8px)',
-                            zIndex: 50
+                            zIndex: 1000
                         }}
                         onClick={onClose}
                     />
@@ -75,12 +68,12 @@ export default function TrainingDataModal({ isOpen, onClose }) {
                         className="glass-card"
                         style={{
                             position: 'fixed',
-                            top: '50%',
+                            top: '15%',
                             left: '50%',
-                            transform: 'translate(-50%, -50%)',
+                            transform: 'translateX(-50%)',
                             width: '100%',
                             maxWidth: '500px',
-                            zIndex: 51,
+                            zIndex: 1001,
                             padding: '2rem',
                             border: '1px solid rgba(255, 255, 255, 0.1)',
                             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
@@ -115,10 +108,10 @@ export default function TrainingDataModal({ isOpen, onClose }) {
                                             onChange={(e) => setDateRange(e.target.value)}
                                             style={{ background: 'rgba(255,255,255,0.05)', color: 'white', borderColor: 'rgba(255,255,255,0.1)' }}
                                         >
-                                            <option value="all">All Time</option>
-                                            <option value="30d">Last 30 Days</option>
-                                            <option value="90d">Last Quarter</option>
-                                            <option value="1y">Last Year</option>
+                                            <option value="all" style={{ background: '#1f2937', color: 'white' }}>All Time</option>
+                                            <option value="30d" style={{ background: '#1f2937', color: 'white' }}>Last 30 Days</option>
+                                            <option value="90d" style={{ background: '#1f2937', color: 'white' }}>Last Quarter</option>
+                                            <option value="1y" style={{ background: '#1f2937', color: 'white' }}>Last Year</option>
                                         </select>
                                     </div>
 
