@@ -8,6 +8,21 @@
   </a>
 </div>
 
+<!-- Animated Hi There -->
+<img src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" width="40" /> &nbsp; **Welcome to ResolveAI — Where Intelligence Meets Resolution** &nbsp; <img src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" width="40" />
+
+<!-- Glitch / Neon Name Banner -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=30,144,255&height=60&text=Next-Gen%20Grievance%20Redressal%20System&fontSize=22&fontColor=fff&animation=fadeIn" />
+
+<br/>
+
+<!-- Animated Stats -->
+<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=1e90ff&icon_color=1e90ff" alt="GitHub Stats" />
+&nbsp;
+<img src="https://github-readme-streak-stats.herokuapp.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true&background=0d1117&ring=1e90ff&fire=1e90ff&currStreakLabel=1e90ff" alt="GitHub Streak" />
+
+<br/><br/>
+
 <h3>🛠️ Tech Stack</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
@@ -16,6 +31,11 @@
   <img src="https://img.shields.io/badge/PyTorch-AI-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
   <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
+
+<!-- Animated Tech Stack Icons -->
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,express,react,pytorch,postgres,vite,git,github&theme=dark&perline=10" />
 </p>
 
 <hr />
@@ -218,6 +238,22 @@ All low-confidence predictions grouped for review:
 - Educational insights into AI performance
 
 </details>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</div>
+
+## ⚡ Vibes
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" alt="coding gif" />
+&nbsp;&nbsp;
+<img src="https://media.giphy.com/media/LaVp0AyqR5bGsC5Cbm/giphy.gif" width="300" alt="ai gif" />
+
+*Built with caffeine, curiosity, and a lot of model fine-tuning* ☕🤖
+
+</div>
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -670,9 +706,16 @@ Community issues, infrastructure problems, public services
 
 <div align="center">
 
-### Team Kaju Katli
+<!-- Animated Team Banner -->
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=30,144,255&height=80&text=Team%20Kaju%20Katli&fontSize=36&fontColor=fff&animation=fadeIn" />
+
+<br/><br/>
 
 **Nishant Kaushik** | **Ayush Raj**
+
+<br/>
+
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> &nbsp; <em>We love connecting with fellow developers and builders!</em>
 
 </div>
 
@@ -702,7 +745,10 @@ Having issues? Check out our [documentation](https://drive.google.com/file/d/12s
 
 <div align="center">
 
-**Made with care by Team Kaju Katli**
+**Made with care by Team Kaju Katli** ❤️
+
+<!-- Animated Profile Views Counter -->
+![Profile Views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=1e90ff&style=for-the-badge&label=README+VIEWS)
 
 *If you find ResolveAI helpful, please consider giving it a star* ⭐
 
