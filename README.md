@@ -325,7 +325,7 @@ npm install
 
 # Configure environment
 cp .env.example .env
-# Edit .env with your Supabase credentials
+# Edit .env with your Supabase credentials or use existing .env
 
 # Start server
 npm run dev
